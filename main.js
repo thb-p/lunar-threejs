@@ -7,12 +7,12 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-const geometry = new THREE.BoxGeometry();
+const geometry = new THREE.SphereGeometry( 15, 32, 32 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+const sphere = new THREE.Mesh( geometry, material );
+scene.add( sphere );
 
-camera.position.z = 5;
+camera.position.z = 40;
 
 function animate() {
 	requestAnimationFrame( animate );
