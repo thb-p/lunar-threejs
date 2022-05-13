@@ -1,0 +1,11 @@
+/* element {
+  property: initial
+} */
+p {
+    font: initial;
+  }
+  
+  /*all gets all values*/
+  h1 {
+    all: initial;
+  }
