@@ -7,10 +7,12 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-const geometry = new THREE.SphereGeometry( 15, 32, 32 );
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const sphere = new THREE.Mesh( geometry, material );
-scene.add( sphere );
+const texture = new THREE.TextureLoader().load('../texture/dem_16_uint.png');
+
+const moonGeometry = new THREE.SphereGeometry( 15, 32, 32 );
+const moonMaterial = new THREE.MeshBasicMaterial({map: texture});
+const moon = new THREE.Mesh( moonGeometry, moonMaterial );
+scene.add( moon );
 
 camera.position.z = 40;
 
