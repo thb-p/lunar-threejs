@@ -11,7 +11,7 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls( camera, renderer.domElement );
-const texture = new THREE.TextureLoader().load('../texture/dem_16_uint.png');
+const texture = new THREE.TextureLoader().load('../texture/lroc_color_poles_8k.png');
 
 const moonGeometry = new THREE.SphereGeometry( 15, 32, 32 );
 const moonMaterial = new THREE.MeshBasicMaterial({map: texture});
